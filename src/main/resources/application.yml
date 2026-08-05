@@ -4,10 +4,8 @@ server:
 spring:
   application:
     name: CustomerService
-  datasource:
-    url: jdbc:postgresql://localhost:5432/customerdb
-    username: postgres
-    password: postgres
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}
   jpa:
     hibernate:
       ddl-auto: update
